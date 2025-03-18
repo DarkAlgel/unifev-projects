@@ -1,5 +1,5 @@
 {
-  "name": "projectgrafos",
+  "name": "unifev-projects",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,11 +11,11 @@
   },
   "dependencies": {
     "pnpm": "^10.6.4",
-    "projectgrafos": "file:",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
-    "react-router-dom": "^7.3.0"
+    "react-router-dom": "^7.3.0",
+    "unifev-projects": "file:"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
