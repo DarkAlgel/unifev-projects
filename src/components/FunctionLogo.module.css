@@ -1,0 +1,46 @@
+/* Centraliza o logo */
+.logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+  
+  /* Remove sublinhados no link */
+  .logoLink {
+    text-decoration: none;
+  }
+  
+  /* Estilo principal do texto */
+  .logo {
+    font-family: 'Poppins', sans-serif; /* Fonte moderna e legível */
+    font-size: 30px; /* Aumenta o tamanho do texto */
+    font-weight: 700; /* Deixa a fonte mais destacada */
+    text-transform: uppercase; /* Torna o texto todo maiúsculo */
+    letter-spacing: 2px; /* Aumenta o espaçamento entre letras */
+    display: flex;
+    align-items: baseline;
+    user-select: none;
+  }
+  
+  /* Estilo para a palavra "Dark" */
+  .dark {
+    color: #8e44ad; /* Roxo com melhor contraste */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra */
+    margin-right: 5px; /* Espaçamento entre as palavras */
+  }
+  
+  /* Estilo para a palavra "Hosting" */
+  .hosting {
+    color: #0056b3; /* Azul com tonalidade mais forte */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra */
+  }
+  
+  /* Adiciona um efeito de hover */
+  .logoLink:hover .dark {
+    color: #9b59b6; /* Roxo mais claro no hover */
+  }
+  
+  .logoLink:hover .hosting {
+    color: #007bff; /* Azul mais claro no hover */
+  }

@@ -1,0 +1,98 @@
+/* PageHome.module.css */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 3rem 1rem;
+    background: #f8f9fa; /* Fundo suave */
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .logo {
+    max-width: 160px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .logo:hover {
+    transform: scale(1.03);
+  }
+  
+  .title {
+    color: #333;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Ícones estilizados */
+  .icon {
+    margin-right: 8px;
+    color: white;
+  }
+  
+  /* Seção do curso */
+  .courseSection {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #5c67f2, #9eaafc);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .courseTitle {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .courseText {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Botão chamativo */
+  .courseButton {
+    display: inline-flex;
+    align-items: center;
+    background-color: #ffd166;
+    color: #333;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .courseButton:hover {
+    background-color: #ffcc5c;
+    transform: scale(1.05);
+  }
+  
+  .courseButton .icon {
+    margin-left: 8px;
+    color: #333;
+  }
+  

@@ -1,0 +1,163 @@
+/* 🏠 Barra de Navegação */
+.navbar {
+  background-color: #1e1e2f;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* 🌍 Container Principal */
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* 🔗 Links Principais */
+.navLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* 🏷️ Botões de navegação melhorados */
+.navLink {
+  color: #E0E0E0;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border-radius: 20px;
+  background-color: rgba(142, 68, 173, 0.1); /* Fundo sutil para destacar */
+  border: 2px solid rgba(142, 68, 173, 0.4); /* Borda levemente destacada */
+  transition: all 0.3s ease;
+}
+
+.navLink:hover {
+  color: #ffffff;
+  background-color: #8e44ad;
+  border-color: #8e44ad;
+  transform: scale(1.05);
+}
+
+/* 📌 Ações da Navbar (Perfil, Login, Idioma) */
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* 🧑‍💼 Perfil do Usuário */
+.userMenu {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.profileButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 2px solid #c792ea;
+  border-radius: 20px;
+  color: #E0E0E0;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.profileButton:hover {
+  background-color: #8e44ad;
+  color: #ffffff;
+}
+
+/* 🔓 Botão de Sair */
+.authButton {
+  padding: 0.6rem 1.5rem;
+  background-color: #8e44ad;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.authButton:hover {
+  background-color: #0056b3;
+}
+
+/* 🌎 Seletor de Idioma */
+.languageSelector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #1e1e2f;
+  color: #E0E0E0;
+  border: 2px solid #8e44ad;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.languageSelector select {
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.languageSelector:hover {
+  border-color: #0056b3;
+}
+
+/* 🔎 Barra de Pesquisa */
+.searchContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.searchInput {
+  width: 100%;
+  max-width: 600px;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  color: #1e1e2f;
+  border: 2px solid #8e44ad;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.searchInput:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 8px rgba(0, 86, 179, 0.5);
+}
+
+/* 📱 Responsividade */
+@media (max-width: 768px) {
+  .navContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .navLinks {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .navActions {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .searchInput {
+    width: 90%;
+  }
+}

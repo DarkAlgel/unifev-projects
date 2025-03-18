@@ -1,0 +1,54 @@
+.footerStyle {
+  background-color: #2C3740;
+  color: #FFF;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+}
+
+.containerStyle {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionStyle {
+  flex: 1;
+  padding: 0 1rem;
+}
+
+.listStyle {
+  list-style-type: none;
+  padding: 0;
+}
+
+.linkStyle {
+  color: #FFF;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.socialMediaStyle {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.iconStyle {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.iconStyle:hover {
+  color: #ccc;
+}
+
+.copyrightStyle {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  border-top: 1px solid #444;
+  padding-top: 1rem;
+  user-select: none;
+}
