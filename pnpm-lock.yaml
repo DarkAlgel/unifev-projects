@@ -11,9 +11,6 @@ importers:
       pnpm:
         specifier: ^10.6.4
         version: 10.6.4
-      unifev-projects:
-        specifier: 'file:'
-        version: 'file:'
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -26,6 +23,9 @@ importers:
       react-router-dom:
         specifier: ^7.3.0
         version: 7.3.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      unifev-projects:
+        specifier: 'file:'
+        version: 'file:'
     devDependencies:
       '@eslint/js':
         specifier: ^9.21.0
@@ -819,9 +819,6 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
-  'unifev-projects@file:':
-    resolution: {directory: '', type: directory}
-
   punycode@2.3.1:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
@@ -906,6 +903,9 @@ packages:
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
+
+  'unifev-projects@file:':
+    resolution: {directory: '', type: directory}
 
   update-browserslist-db@1.1.3:
     resolution: {integrity: sha512-UxhIZQ+QInVdunkDAaiazvvT/+fXL5Osr0JZlJulepYu6Jd7qJtDZjlur0emRlT71EN3ScPoE7gvsuIKKNavKw==}
@@ -1658,13 +1658,6 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  'unifev-projects@file:':
-    dependencies:
-      pnpm: 10.6.4
-      react: 19.0.0
-      react-dom: 19.0.0(react@19.0.0)
-      react-router-dom: 7.3.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-
   punycode@2.3.1: {}
 
   react-dom@19.0.0(react@19.0.0):
@@ -1748,6 +1741,14 @@ snapshots:
   type-check@0.4.0:
     dependencies:
       prelude-ls: 1.2.1
+
+  'unifev-projects@file:':
+    dependencies:
+      pnpm: 10.6.4
+      react: 19.0.0
+      react-dom: 19.0.0(react@19.0.0)
+      react-icons: 5.5.0(react@19.0.0)
+      react-router-dom: 7.3.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
 
   update-browserslist-db@1.1.3(browserslist@4.24.4):
     dependencies:
