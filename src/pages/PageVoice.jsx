@@ -5,6 +5,7 @@ import { FaMicrophone, FaVolumeUp, FaRobot } from "react-icons/fa";
 const PageVoice = () => {
   const [text, setText] = useState('');
   const [listening, setListening] = useState(false);
+  const [command, setCommand] = useState(null); // comando reconhecido (ligar/desligar/etc)
 
   const startListening = () => {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -19,14 +20,19 @@ const PageVoice = () => {
     setListening(true);
 
     recognition.onresult = (event) => {
-      const transcript = event.results[0][0].transcript.toLowerCase();
+      const transcript = event.results[0][0].transcript.toLowerCase().trim();
       setText(transcript);
       setListening(false);
 
-      if (transcript.includes("ligar")) {
-        alert("🟢 Comando: Ligar");
-      } else if (transcript.includes("desligar")) {
-        alert("🔴 Comando: Desligar");
+      // divide por palavras para evitar confusão com "desligar" incluindo "ligar"
+      const palavras = transcript.split(/\s+/);
+
+      if (palavras.includes("desligar")) {
+        setCommand("desligar");
+      } else if (palavras.includes("ligar")) {
+        setCommand("ligar");
+      } else {
+        setCommand("comando não reconhecido");
       }
     };
 
@@ -36,6 +42,8 @@ const PageVoice = () => {
       setListening(false);
     };
   };
+
+  const fecharModal = () => setCommand(null);
 
   return (
     <div className={styles.container}>
@@ -53,6 +61,20 @@ const PageVoice = () => {
       <p className={styles.result}>
         Texto reconhecido: <strong>{text || "Nenhum"}</strong>
       </p>
+
+      {/* Modal simples */}
+      {command && (
+        <div className={styles.modalOverlay}>
+          <div className={styles.modalBox}>
+            <p>
+              {command === "ligar" && "🟢 Comando reconhecido: Ligar"}
+              {command === "desligar" && "🔴 Comando reconhecido: Desligar"}
+              {command === "comando não reconhecido" && "⚠️ Comando não reconhecido."}
+            </p>
+            <button onClick={fecharModal} className={styles.modalCloseButton}>Fechar</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
