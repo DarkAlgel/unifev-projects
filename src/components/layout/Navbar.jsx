@@ -18,6 +18,7 @@ const Navbar = () => {
         <div className={styles.navLinks}>
           <Link to="/" className={styles.navLink}>Início</Link>
           <Link to="/Grafo" className={styles.navLink}>Grafos</Link>
+          <Link to="/voz" className={styles.navLink}>Voz</Link>
           <Link to="/contact" className={styles.navLink}>Contato</Link>
           <Link to="/projects" className={styles.navLink}>Projetos</Link>
         </div>
